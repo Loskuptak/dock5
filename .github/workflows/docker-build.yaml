@@ -43,3 +43,12 @@ jobs:
       run: |
         echo "📋 Seznam vytvořených images:"
         docker images | grep \${{ env.IMAGE_NAME }}
+    
+    - name: Create ZIP artifact
+      run: zip balicek.zip soucet.py test_soucet.py
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: balicek
+        path: balicek.zip
