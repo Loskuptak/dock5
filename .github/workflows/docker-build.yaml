@@ -48,7 +48,7 @@ jobs:
       run: zip balicek.zip soucet.py test_soucet.py
     
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/uplaod-artifact@v4
       with:
         name: balicek
         path: balicek.zip
